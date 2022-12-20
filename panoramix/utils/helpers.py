@@ -7,17 +7,17 @@ from copy import copy, deepcopy
 from pathlib import Path
 from appdirs import user_cache_dir
 
-COLOR_HEADER = "\033[95m"
-COLOR_BLUE = "\033[94m"
-COLOR_OKGREEN = "\033[92m"
-COLOR_WARNING = "\033[93m"
-FAIL = "\033[91m"
-ENDC = "\033[0m"
-COLOR_BOLD = "\033[1m"
-COLOR_UNDERLINE = "\033[4m"
-COLOR_GREEN = "\033[32m"
-COLOR_GRAY = "\033[38;5;8m"
-COLOR_ASM = "\033[38;5;33m"
+COLOR_HEADER = ""
+COLOR_BLUE = ""
+COLOR_OKGREEN = ""
+COLOR_WARNING = ""
+FAIL = ""
+ENDC = ""
+COLOR_BOLD = ""
+COLOR_UNDERLINE = ""
+COLOR_GREEN = ""
+COLOR_GRAY = ""
+COLOR_ASM = ""
 
 """
     slowly refactoring into low-caps names,
@@ -62,21 +62,21 @@ def convert(text):
 
 class C:
     #    asm = '\033[38;5;33m'
-    header = "\033[95m"
-    blue = "\033[94m"
-    okgreen = "\033[92m"
-    warning = "\033[93m"
-    red = "\033[91m"
-    bold = "\033[1m"
-    underline = "\033[4m"
-    green = "\033[32m"
-    gray = "\033[38;5;8m"
-    endc = "\033[0m"
-    fail = "\033[91m"
+    header = ""
+    blue = ""
+    okgreen = ""
+    warning = ""
+    red = ""
+    bold = ""
+    underline = ""
+    green = ""
+    gray = ""
+    endc = ""
+    fail = ""
     end = endc
 
-    green_back = "\033[42;1m\033[38;5;0m"
-    blue_back = "\033[43;1m\033[38;5;0m"
+    green_back = ""
+    blue_back = ""
 
     def asm(s):
         return "\033[38;5;33m" + s + C.endc

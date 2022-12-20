@@ -219,17 +219,17 @@ def _decompile_with_loader(loader, only_func_name=None) -> Decompilation:
             Print out decompilation header
         """
 
-        print(C.gray + "# Palkeoramix decompiler. " + C.end)
+        # print(C.gray + "# Palkeoramix decompiler. " + C.end)
 
-        if len(problems) > 0:
-            print(C.gray + "#")
-            print("#  I failed with these: ")
-            for p in problems.values():
-                print(f"{C.end}{C.gray}#  - {C.end}{C.fail}{p}{C.end}{C.gray}")
-            print("#  All the rest is below.")
-            print("#" + C.end)
-
-        print()
+        # if len(problems) > 0:
+        #     # print(C.gray + "#")
+        #     print("#  I failed with these: ")
+        #     for p in problems.values():
+        #         print(f"{C.end}{C.gray}#  - {C.end}{C.fail}{p}{C.end}{C.gray}")
+        #     print("#  All the rest is below.")
+        #     print("#" + C.end)
+        #
+        # print()
 
         """
             Print out constants & storage
@@ -276,9 +276,9 @@ def _decompile_with_loader(loader, only_func_name=None) -> Decompilation:
             key=lambda f: f.priority()
         )  # sort func list by length, with some caveats
 
-        if shown_already and any(1 for f in func_list if f.hash not in shown_already):
-            # otherwise no irregular functions, so this is not needed :)
-            print(C.gray + "#\n#  Regular functions\n#" + C.end + "\n")
+        # if shown_already and any(1 for f in func_list if f.hash not in shown_already):
+        #     # otherwise no irregular functions, so this is not needed :)
+        #     print(C.gray + "#\n#  Regular functions\n#" + C.end + "\n")
 
         for func in func_list:
             hash = func.hash

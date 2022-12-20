@@ -303,7 +303,7 @@ class Function(EasyCopy):
                 + self.color_name
                 + (color(" payable", C.header) if self.payable else "")
                 + ": "
-                + color(comment, C.gray)
+                # + color(comment, C.gray)
             ]
 
             if self.ast is not None:
